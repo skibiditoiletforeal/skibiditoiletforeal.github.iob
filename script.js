@@ -32,13 +32,16 @@ let countdownFunction = setInterval(() => {
     let now = new Date().getTime();
     let timeLeft = countdownDate - now;
 
+    // Calculate time components
     let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-    let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-    let seconds = Math.floor((timeLeft / 1000) % 60);
+    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
+    // Display the result in days, hours, minutes, and seconds
     document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
+    // When the countdown is finished
     if (timeLeft < 0) {
         clearInterval(countdownFunction);
         document.getElementById('countdown').innerHTML = "Completed!";
