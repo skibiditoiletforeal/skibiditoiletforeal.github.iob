@@ -1,5 +1,18 @@
-// Set the date for the countdown (example: 1 hour from now)
-let countdownDate = new Date().getTime() + (240 * 240 * 4000); // Adjust time here as needed
+// Calculate total time in milliseconds
+let yearsInMillis = 17 * 365 * 24 * 60 * 60 * 1000;
+let monthsInMillis = 194 * 30 * 24 * 60 * 60 * 1000;
+let weeksInMillis = 96 * 7 * 24 * 60 * 60 * 1000;
+let daysInMillis = 481 * 24 * 60 * 60 * 1000;
+let hoursInMillis = 48120 * 60 * 60 * 1000;
+let minutesInMillis = 3922 * 60 * 1000;
+let secondsInMillis = 4894 * 1000;
+let milliseconds = 4789327423;
+
+// Total time for countdown in milliseconds
+let totalTime = yearsInMillis + monthsInMillis + weeksInMillis + daysInMillis + hoursInMillis + minutesInMillis + secondsInMillis + milliseconds;
+
+// Set the countdown date
+let countdownDate = new Date().getTime() + totalTime;
 
 // Update the countdown every second
 let countdownFunction = setInterval(() => {
