@@ -1,5 +1,5 @@
 // Set the date for the countdown (example: 1 hour from now)
-let countdownDate = new Date().getTime() + (60 * 60 * 1000); // Adjust time here as needed
+let countdownDate = new Date().getTime() + (240 * 240 * 4000); // Adjust time here as needed
 
 // Update the countdown every second
 let countdownFunction = setInterval(() => {
