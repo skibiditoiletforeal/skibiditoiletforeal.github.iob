@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travis Scott Fan Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+    #fan-page, #virus-page {
+      display: none;
+    }
+    #virus-page {
+      background-color: red;
+      color: white;
+      font-size: 2em;
+    }
+    img {
+      width: 300px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>I finish website in</h1>
-        <div id="countdown" class="countdown"></div>
-        <p class="bible-verse">"And then I will declare to them, ‘I never knew you; depart from Me, you who practice lawlessness!’" - Matthew 7:23</p>
-    </div>
-    <script src="script.js"></script>
+  <div id="fan-page">
+    <h1>Welcome to the Ultimate Travis Scott Fan Page!</h1>
+    <p>Get all the latest updates about Travis Scott, his music, and more.</p>
+    <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Travis Scott Image">
+    <p>New album coming soon! Stay tuned for exclusive content.</p>
+  </div>
+
+  <div id="virus-page">
+    <h1>WARNING: Your PC is infected!</h1>
+    <p>Your computer has been compromised. Do not close this page!</p>
+    <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Virus Warning Image">
+  </div>
+
+  <audio id="cool-sound" src="cool.mp3"></audio>
+
+  <script>
+    window.onload = function() {
+      document.getElementById('fan-page').style.display = 'block';
+
+      // Trigger the virus page after 5 seconds
+      setTimeout(function() {
+        document.getElementById('fan-page').style.display = 'none';
+        document.getElementById('virus-page').style.display = 'block';
+
+        // Play the sound when virus page is triggered
+        document.getElementById('cool-sound').play();
+      }, 5000); // 5000 ms = 5 seconds
+    };
+  </script>
 </body>
 </html>
