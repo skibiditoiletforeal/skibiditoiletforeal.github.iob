@@ -1,175 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travies Scot Fan Page</title>
-  <style>
-    /* General Styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #111;
-      color: white;
-      text-align: center;
+body {
+    background-color: #b20000;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.wannacry-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 100px auto;
+    border: 5px solid black;
+    background-color: #ffffff;
+    color: black;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+
+    .header {
+        background-color: #cc0000;
+        color: white;
+        padding: 20px;
+        font-size: 24px;
+        text-transform: uppercase;
     }
 
-    /* Hero Banner Section */
-    .hero {
-      background-image: url('https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain');
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .content {
+        padding: 20px;
+
+        p {
+            margin: 10px 0;
+        }
+
+        .info-box {
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .payment-info {
+            background-color: #ffeb3b;
+            padding: 10px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+
+            .timer {
+                font-size: 30px;
+                font-weight: bold;
+                color: #cc0000;
+            }
+
+            .amount {
+                font-size: 22px;
+                color: #cc0000;
+            }
+        }
+
+        .instructions {
+            h3 {
+                margin-top: 20px;
+                color: #cc0000;
+            }
+
+            .bitcoin-address {
+                background-color: #000;
+                color: #00ff00;
+                font-family: monospace;
+                padding: 10px;
+                margin-top: 10px;
+                word-break: break-all;
+            }
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+
+            .btn {
+                background-color: #cc0000;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                margin: 0 10px;
+                cursor: pointer;
+                font-size: 16px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: #a30000;
+                }
+            }
+        }
     }
-
-    .hero h1 {
-      font-size: 4em;
-      font-weight: bold;
-      color: #fff;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 1.5em;
-      color: #ddd;
-    }
-
-    .hero button {
-      background-color: #ff5e57;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    .hero button:hover {
-      background-color: #e14b44;
-    }
-
-    /* Fake Ad Popup */
-    #fake-ad {
-      background-color: yellow;
-      color: black;
-      padding: 10px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      text-align: center;
-      font-weight: bold;
-      cursor: pointer;
-      display: none;
-    }
-
-    /* Fan Page Content */
-    #fan-page {
-      display: none;
-    }
-
-    /* Virus Page Content */
-    #virus-page {
-      display: none;
-      background-color: white;
-      color: black;
-      font-size: 1.5em;
-      text-align: center;
-      padding: 50px;
-    }
-
-    /* WannaCry Replica Page */
-    #wannacry-page {
-      display: none;
-      background-color: #1e1e1e;
-      color: white;
-      font-family: monospace;
-      text-align: left;
-      padding: 20px;
-    }
-
-    /* Fake WannaCry Styling */
-    .wannacry-warning {
-      color: red;
-      font-size: 2em;
-    }
-  </style>
-</head>
-<body>
-  <!-- Fake Ad Popup -->
-  <div id="fake-ad">Download Travies Scot's Latest Album Now!</div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Travies Scot</h1>
-    <p>The Official Fan Page</p>
-    <button id="explore-btn">Explore More</button>
-  </section>
-
-  <!-- Fan Page Content -->
-  <div id="fan-page">
-    <h2>Latest Updates</h2>
-    <p>Get all the latest updates about Travies Scot, his music, and more.</p>
-    <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Travies Scot Image">
-    <p>New album coming soon! Stay tuned for exclusive content from Travies Scot.</p>
-  </div>
-
-  <!-- Fake Virus Page -->
-  <div id="virus-page">
-    <h1>⚠️ Windows Security Alert ⚠️</h1>
-    <p>WARNING: Your PC has been infected with the <strong>Travies Scot Virus</strong>!</p>
-    <p>Your files are at risk. Immediate action is required!</p>
-    <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Virus Warning Image">
-    <p>Please contact support immediately or follow the instructions to remove the virus.</p>
-  </div>
-
-  <!-- Fake WannaCry Ransomware Page -->
-  <div id="wannacry-page">
-    <h1 class="wannacry-warning">Oops! Your files have been encrypted!</h1>
-    <p>All your files have been encrypted by the <strong>Travies Scot Virus</strong>.</p>
-    <p>You must send $300 in Bitcoin to unlock them.</p>
-    <p><strong>NOTE: This is a FAKE ransomware warning. No files are encrypted.</strong></p>
-    <p style="color: red;">Send $300 worth of Bitcoin to the following address:</p>
-    <p>Bitcoin Address: 1TraviesScotFakeVirus1234</p>
-    <p>Time remaining to pay: 24 hours</p>
-    <p style="color: red;">Failure to pay will result in permanent loss of files.</p>
-    <hr>
-    <p>If you see this text but haven't received any ransom instructions, please be aware that this is FAKE. Your files are safe.</p>
-  </div>
-
-  <audio id="cool-sound" src="cool.mp3"></audio>
-
-  <script>
-    window.onload = function() {
-      document.getElementById('fake-ad').style.display = 'block';  // Show fake ad after load
-
-      // Show fan page when explore button is clicked
-      document.getElementById('explore-btn').addEventListener('click', function() {
-        document.querySelector('.hero').style.display = 'none';
-        document.getElementById('fan-page').style.display = 'block';
-      });
-
-      // Event listener for fake ad
-      document.getElementById('fake-ad').addEventListener('click', function() {
-        document.getElementById('fan-page').style.display = 'none';
-        document.getElementById('virus-page').style.display = 'block';
-        document.getElementById('fake-ad').style.display = 'none';
-
-        // Play sound when virus page is triggered
-        document.getElementById('cool-sound').play();
-
-        // After 5 seconds, show fake WannaCry screen
-        setTimeout(function() {
-          document.getElementById('virus-page').style.display = 'none';
-          document.getElementById('wannacry-page').style.display = 'block';
-        }, 5000); // Display after 5 seconds
-      });
-    };
-  </script>
-</body>
-</html>
+}
