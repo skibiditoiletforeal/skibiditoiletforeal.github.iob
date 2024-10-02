@@ -1,7 +1,6 @@
-
 body {
     background-color: #b20000;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     color: white;
     text-align: center;
     margin: 0;
@@ -10,13 +9,14 @@ body {
 
 .wannacry-container {
     width: 80%;
-    max-width: 900px;
-    margin: 100px auto;
-    border: 5px solid black;
+    max-width: 800px;
+    margin: 5% auto;
+    border: 10px solid black;
     background-color: #ffffff;
     color: black;
     padding: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
 
     .header {
         background-color: #cc0000;
@@ -24,6 +24,7 @@ body {
         padding: 20px;
         font-size: 24px;
         text-transform: uppercase;
+        border-radius: 5px 5px 0 0;
     }
 
     .content {
@@ -38,6 +39,7 @@ body {
             border: 1px solid #000;
             padding: 15px;
             margin-bottom: 20px;
+            border-radius: 5px;
         }
 
         .payment-info {
@@ -45,6 +47,7 @@ body {
             padding: 10px;
             border: 1px solid #000;
             margin-bottom: 20px;
+            border-radius: 5px;
 
             .timer {
                 font-size: 30px;
@@ -71,6 +74,7 @@ body {
                 padding: 10px;
                 margin-top: 10px;
                 word-break: break-all;
+                border-radius: 5px;
             }
         }
 
@@ -86,6 +90,7 @@ body {
                 cursor: pointer;
                 font-size: 16px;
                 text-transform: uppercase;
+                border-radius: 5px;
 
                 &:hover {
                     background-color: #a30000;
