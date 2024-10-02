@@ -5,17 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travies Scot Fan Page</title>
   <style>
+    /* General Styling */
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f4f4f4;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #111;
+      color: white;
+      text-align: center;
     }
+
+    /* Hero Banner Section */
+    .hero {
+      background-image: url('https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      color: #ddd;
+    }
+
+    .hero button {
+      background-color: #ff5e57;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .hero button:hover {
+      background-color: #e14b44;
+    }
+
+    /* Fake Ad Popup */
     #fake-ad {
       background-color: yellow;
       color: black;
-      padding: 15px;
+      padding: 10px;
       position: fixed;
       top: 0;
       width: 100%;
@@ -23,27 +65,35 @@
       text-align: center;
       font-weight: bold;
       cursor: pointer;
-    }
-    #fan-page, #virus-page, #wannacry-page {
       display: none;
-      margin-top: 50px; /* Keep content below fake ad */
     }
+
+    /* Fan Page Content */
+    #fan-page {
+      display: none;
+    }
+
+    /* Virus Page Content */
     #virus-page {
+      display: none;
       background-color: white;
       color: black;
       font-size: 1.5em;
+      text-align: center;
+      padding: 50px;
     }
+
+    /* WannaCry Replica Page */
     #wannacry-page {
+      display: none;
       background-color: #1e1e1e;
       color: white;
       font-family: monospace;
       text-align: left;
       padding: 20px;
     }
-    img {
-      width: 300px;
-      height: auto;
-    }
+
+    /* Fake WannaCry Styling */
     .wannacry-warning {
       color: red;
       font-size: 2em;
@@ -52,11 +102,18 @@
 </head>
 <body>
   <!-- Fake Ad Popup -->
-  <div id="fake-ad">Download Travies Scot Music Now!</div>
+  <div id="fake-ad">Download Travies Scot's Latest Album Now!</div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Travies Scot</h1>
+    <p>The Official Fan Page</p>
+    <button id="explore-btn">Explore More</button>
+  </section>
 
   <!-- Fan Page Content -->
   <div id="fan-page">
-    <h1>Welcome to the Ultimate Travies Scot Fan Page!</h1>
+    <h2>Latest Updates</h2>
     <p>Get all the latest updates about Travies Scot, his music, and more.</p>
     <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Travies Scot Image">
     <p>New album coming soon! Stay tuned for exclusive content from Travies Scot.</p>
@@ -64,16 +121,16 @@
 
   <!-- Fake Virus Page -->
   <div id="virus-page">
-    <h1>Windows Security Alert</h1>
+    <h1>⚠️ Windows Security Alert ⚠️</h1>
     <p>WARNING: Your PC has been infected with the <strong>Travies Scot Virus</strong>!</p>
-    <p>Your files are at risk. Immediate action required!</p>
+    <p>Your files are at risk. Immediate action is required!</p>
     <img src="https://th.bing.com/th/id/OIP.m2zReQ9UDT9iuO9ieFFXZQAAAA?rs=1&pid=ImgDetMain" alt="Virus Warning Image">
+    <p>Please contact support immediately or follow the instructions to remove the virus.</p>
   </div>
 
   <!-- Fake WannaCry Ransomware Page -->
   <div id="wannacry-page">
     <h1 class="wannacry-warning">Oops! Your files have been encrypted!</h1>
-    <p>What happened to my computer?</p>
     <p>All your files have been encrypted by the <strong>Travies Scot Virus</strong>.</p>
     <p>You must send $300 in Bitcoin to unlock them.</p>
     <p><strong>NOTE: This is a FAKE ransomware warning. No files are encrypted.</strong></p>
@@ -89,7 +146,13 @@
 
   <script>
     window.onload = function() {
-      document.getElementById('fan-page').style.display = 'block';
+      document.getElementById('fake-ad').style.display = 'block';  // Show fake ad after load
+
+      // Show fan page when explore button is clicked
+      document.getElementById('explore-btn').addEventListener('click', function() {
+        document.querySelector('.hero').style.display = 'none';
+        document.getElementById('fan-page').style.display = 'block';
+      });
 
       // Event listener for fake ad
       document.getElementById('fake-ad').addEventListener('click', function() {
